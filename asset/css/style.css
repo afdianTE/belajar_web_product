@@ -2,6 +2,7 @@
 body {
   position: relative;
   display: flex;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #0f0f2b;
   color: white;
@@ -10,16 +11,17 @@ body {
 /* navbar */
 header{
   width: 100%;
-}
-nav.navbar {
   position: sticky;
   z-index: 9;
+  top: 20px;
+}
+nav.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 20px;
   padding: 0 50px;
   width: 100%;
+  flex-wrap: wrap;
 }
 .brand {
   color: white;
@@ -43,7 +45,7 @@ nav.navbar {
   border-radius: 1rem;
   border: 1px solid black;
   padding: 5px 10px;
-  width: 40vw;
+  width: 40%;
   justify-content: space-around;
 }
 .link-navbar > li {
@@ -75,17 +77,24 @@ nav.navbar {
   overflow: hidden;
   margin: -30px 0 10px 0;
 }
-.bg-home img {
+.home .bg-home{
   object-fit: cover;
-  width: 100%;
+}
+.bg-home img {
   border-radius: 2rem;
+  width: 100%;
 }
 .text-home {
   position: absolute;
   z-index: 1;
   top: 50%;
-  left: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
+  background-color: #00000070;
+  padding: 2rem;
+  border: 1px solid #00000031;
+  border-radius: 2rem;
 }
 .text-home > .titel {
   font-size: 2rem;
@@ -93,6 +102,7 @@ nav.navbar {
   line-height: 2.1rem;
   word-spacing: 1.2rem;
   margin-bottom: 1rem;
+  text-align: center;
   max-width: 35rem;
   text-shadow: 1px 1px 3px black;
 }
@@ -107,6 +117,7 @@ nav.navbar {
   margin-top: 1rem;
   display: flex;
   gap: 2rem;
+  justify-content: center;
 }
 .text-home button {
   font-size: 1rem;
@@ -173,3 +184,48 @@ transition: .2s linear;
 
 }
 /* about */
+/* product */
+.product{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 2rem;
+  position: relative;
+  padding: 3rem 0;
+}
+.product .text-judul{
+  color: black;
+  font-size: 2rem;
+  font-weight: 600;
+margin: 1rem auto 1rem 30%;
+text-shadow: 1px 1px 1px #a3a3a3;
+}
+.product > .list{
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: space-evenly;
+max-width: 60rem;
+margin: auto;
+}
+.product > .list > .card{
+padding: 2px;
+box-shadow: 5px 5px 10px 1px black;
+background-color: black;
+border-radius: 2rem;
+}
+.product > .list > .card img{
+  width: 400px;
+  border-radius: 2rem;
+  border: 1px solid rgb(0, 0, 0);
+}
+.product .show-more{
+  margin: 1rem 30% 1rem auto;
+}
+.product .show-more a{
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  color: black;
+}
+/* product */
